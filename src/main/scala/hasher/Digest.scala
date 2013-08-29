@@ -69,6 +69,9 @@ object Digest {
     private[hasher] def hmacSha256 ( key: String )
         = Builder( (build) => new HMAC(build, "HmacSHA256", key) )
 
+    private[hasher] def hmacSha512 ( key: String )
+        = Builder( (build) => new HMAC(build, "HmacSHA512", key) )
+
     private[hasher] val crc32 = Builder( (build) => new CRC32Digest )
 
     private[hasher] val bcrypt = Builder( (build) => new BCryptDigest )

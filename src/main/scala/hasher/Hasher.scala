@@ -52,6 +52,11 @@ object Hasher {
     def hmacSha256( key: String ) = new Algo( Digest.hmacSha256(key) )
 
     /**
+     * Generates an HMAC-SHA512 hash of a string
+     */
+    def hmacSha512( key: String ) = new Algo( Digest.hmacSha512(key) )
+
+    /**
      * Generates a crc32 hash of a string
      */
     def crc32 = new Algo( Digest.crc32 )
